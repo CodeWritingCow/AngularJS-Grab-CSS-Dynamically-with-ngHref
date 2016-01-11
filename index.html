@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html ng-app="linkApp" ng-controller="mainController">
+
+    <head>
+        <title></title>
+
+        <!-- Pull in CSS based on Angular -->
+        <link rel="stylesheet" ng-href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/{{ css }}/bootstrap.min.css">
+        <link rel="stylesheet" ng-href="layout-{{ layout }}.css">
+        <style>
+            body { padding-top: 50px; }
+        </style>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <script src="app.js"></script>
+
+    </head>
+
+    <body class="container">
+
+        <!-- Section to select styles -->
+        <div class="well">
+            <form>
+
+                <div class="form-group">
+                    <label>Theme</label>
+                    <select class="form-control" ng-model="css" ng-options="bootstrap.url as bootstrap.name for bootstrap in bootstraps"></select>
+                </div>
+
+                <div class="form-group">
+                    <label>Layout</label>
+                    <select class="form-control" ng-model="layout" ng-options="layout.url as layout.name for layout in layouts"></select>
+                </div>
+
+            </form>
+        </div>
+
+        <hr>
+        
+        <div class="picture-thing">
+            <div class="picture-thing-img">
+                <img src="https://picjumbo.imgix.net/HNCK0343.jpg" width="100%">
+                <!-- img link in tutorial is broken <img src="https://cask.scotch.io/2014/10/picture-picture.jpg"> -->
+            </div>
+            <div class="picture-thing-content">
+                <h2>Bananas</h2>
+                <p>This demo is just that.</p>
+            </div>
+        </div>
+        
+    </body>
+</html>
