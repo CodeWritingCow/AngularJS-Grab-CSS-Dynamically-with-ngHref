@@ -1,4 +1,4 @@
-# AngularJS Change
+# AngularJS: Change CSS Dynamically
 _by Gary Pang, "CodeWritingCow"_
 
 This sample webpage uses AngularJS and ngHref to change its CSS styling dynamically.
